@@ -39,7 +39,7 @@ birthdays_dict = {(data_row["month"], data_row["day"]): data_row for (index, dat
 # HINT 3: Use the replace() method to replace [NAME] with the actual name. https://www.w3schools.com/python/ref_string_replace.asp
 if (today_month, today_day) in birthdays_dict:
     birthday_person = birthdays_dict[today]
-    file_path = f"./letter_templates/letter_{random.randint(1, 3)}.txt"
+    file_path = f"letter_{random.randint(1, 3)}.txt"
     with open(file_path) as letter_file:
         contents = letter_file.read()
         contents = contents.replace("[NAME]", birthday_person["name"])
